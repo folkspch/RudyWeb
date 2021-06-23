@@ -1,0 +1,55 @@
+<template>
+<div>
+<v-app class="page">
+  
+    <v-app-bar
+      class="bar"
+      absolute
+      color="#3b6ab6"
+      light
+      shrink-on-scroll
+      height="80em"
+      scroll-target="#scrolling-techniques"
+      app
+    >
+      
+      <img class="rudy_logo" src="../assets/rudy_logo.png"/>
+      
+    </v-app-bar>
+  
+  <v-main >
+      <v-container class="main">
+        <nuxt />
+      </v-container>
+  </v-main>
+</v-app>
+</div>
+  
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      
+    }
+  }
+}
+</script>
+<style scoped>
+.page{
+  background-color: white;
+}
+.main{
+  max-width: 100%;
+  padding: 0em;
+  
+}
+.rudy_logo{
+  height: 2.25em;
+  width: 4.5em;
+  margin-top: 0.3em;
+}
+
+  
+</style>
