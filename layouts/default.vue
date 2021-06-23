@@ -22,17 +22,22 @@
         <nuxt />
       </v-container>
   </v-main>
+  <Footer/>
 </v-app>
 </div>
   
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 export default {
   data () {
     return {
       
     }
+  },
+  components:{
+    Footer
   }
 }
 </script>

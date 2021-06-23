@@ -79,7 +79,6 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;500&display=swap');
 *{
-  /* background-color: white; */
   color: black;
   justify-content: center;
   align-items: center;
