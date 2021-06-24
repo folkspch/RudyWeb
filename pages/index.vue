@@ -45,14 +45,12 @@
       </v-slide-item>
     </v-slide-group>
   </v-sheet>
-  <Footer/>  
 </div>
   
 </template>
 
 <script>
 import News from '@/components/News'
-import Footer from '@/components/Footer'
 
 export default {
   data(){
@@ -66,8 +64,7 @@ export default {
     }
   },
   components:{
-    News,
-    Footer
+    News
     
   },
   
