@@ -23,8 +23,9 @@
         cols="12"
         color="#3b6ab6"
       >
-      <v-divider></v-divider>
+
         <div class="footer-license">{{ new Date().getFullYear() }} © Rudy Technology Co., Ltd. All Rights Reserved.</div>
+
       </v-col>
     </v-row>
   </v-footer>
@@ -46,5 +47,6 @@ export default {
 <style scoped>
 .footer-license{
     font-size: 0.8em;
+    margin-bottom: 1em;
 }
 </style>

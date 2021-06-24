@@ -27,6 +27,20 @@
         </v-card-text>
     </v-card>
     </v-responsive>
+    
+
+    <div class="titleNews-container">
+      <v-row>
+        
+        <img src="../assets/rudyPic/rdylogo.png" height="70em" width="140em" />
+        <div class="NewsTitleText">NEWS</div>
+        
+      </v-row>
+    </div>
+
+ 
+
+
   <v-sheet
     class="mx-auto"
     max-width="60%"
@@ -109,6 +123,14 @@ export default {
   width:5em;
   height:2.5em;
   margin-top: 1em;
+}
+.titleNews-container{
+  margin:1em;
+}
+.NewsTitleText{
+  font-size: 2em;
+  margin-left:5px;
+  font-style: normal;
 }
 
 </style>

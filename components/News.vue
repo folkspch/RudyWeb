@@ -1,5 +1,6 @@
 <template>
 <div>
+    
     <div>
     <v-card class="Ex-news"
     max-width="300"

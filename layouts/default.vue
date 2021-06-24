@@ -42,6 +42,10 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;500&display=swap');
+*{
+  font-family: 'Prompt', sans-serif;
+}
 .page{
   background-color: white;
 }
