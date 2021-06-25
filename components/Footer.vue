@@ -7,17 +7,17 @@
       justify="center"
       no-gutters
     >
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
-      >
-        {{ link }}
-      </v-btn>
-      
+        <v-btn
+          v-for="(link, text) in links" :key="text"
+          text
+          rounded
+          class="my-2"
+        >
+          <NuxtLink :to="link" class="footer-btn"> {{ text }}</NuxtLink>
+
+        </v-btn>
+    
+
       <v-col
         class="py-3 text-center white--text"
         cols="12"
@@ -34,12 +34,13 @@
 <script>
 export default {
     data: () => ({
-      links: [
-        'Home',
-        'About Us',
-        'Services',
-        'Contact Us',
-      ],
+      links: {
+        'Home': '/',
+        'About Us': '/About',
+        'Services': '/Service',
+        'Contact Us': '/Contact',
+      },
+      
     }),
 }
 </script>
@@ -48,5 +49,9 @@ export default {
 .footer-license{
     font-size: 0.8em;
     margin-bottom: 1em;
+}
+.footer-btn{
+  color: white;
+  text-decoration: none;
 }
 </style>

@@ -13,7 +13,7 @@
       app
     >
       
-      <img class="rudy_logo" src="../assets/rudy_logo.png"/>
+      <NuxtLink to="/"><img class="rudy_logo" src="../assets/rudy_logo.png"/></NuxtLink>
       
     </v-app-bar>
   

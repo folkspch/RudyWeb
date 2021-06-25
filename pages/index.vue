@@ -13,7 +13,7 @@
         </v-carousel-item>
       </v-carousel>
     </div>
-    <v-responsive>
+    <!-- <v-responsive>
      <v-card light>
         <v-card-title >
             <div id="AboutRudy-title"> About RUDY</div>
@@ -26,21 +26,16 @@
             
         </v-card-text>
     </v-card>
-    </v-responsive>
+    </v-responsive> -->
     
 
-    <div class="titleNews-container">
+  <div class="News-container">
       <v-row>
         
         <img src="../assets/rudyPic/rdylogo.png" height="70em" width="140em" />
         <div class="NewsTitleText">NEWS</div>
         
       </v-row>
-    </div>
-
- 
-
-
   <v-sheet
     class="mx-auto"
     max-width="60%"
@@ -59,6 +54,7 @@
       </v-slide-item>
     </v-slide-group>
   </v-sheet>
+  </div>
 </div>
   
 </template>
@@ -81,9 +77,6 @@ export default {
     News
     
   },
-  
-
-  
 }
 </script>
 
@@ -124,8 +117,8 @@ export default {
   height:2.5em;
   margin-top: 1em;
 }
-.titleNews-container{
-  margin:1em;
+.News-container{
+  margin:4%;
 }
 .NewsTitleText{
   font-size: 2em;
