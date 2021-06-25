@@ -13,8 +13,6 @@
         />
         <v-card-title>ตัวอย่างข่าว</v-card-title>
         <v-card-text> 
-
-            
             <v-row
                 align="center"
                 class="mx-0">
@@ -22,9 +20,9 @@
             </v-row>
         </v-card-text>
         <v-card-text>
-            <a href="">
+            <Nuxt-link to="/shownews">
                 อ่านเพิ่มเติม..
-            </a>    
+            </Nuxt-link>    
         </v-card-text>    
     </v-card>
     </div>
