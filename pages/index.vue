@@ -13,6 +13,9 @@
         </v-carousel-item>
       </v-carousel>
     </div>
+    <div>
+      <AboutRudy/>
+    </div>
     <!-- <v-responsive>
      <v-card light>
         <v-card-title >
@@ -30,12 +33,14 @@
     
 
   <div class="News-container">
+    <div class="titleNews-container">
       <v-row>
         
         <img src="../assets/rudyPic/rdylogo.png" height="70em" width="140em" />
         <div class="NewsTitleText">NEWS</div>
         
       </v-row>
+    </div>  
   <v-sheet
     class="mx-auto"
     max-width="60%"
@@ -61,6 +66,7 @@
 
 <script>
 import News from '@/components/News'
+import AboutRudy from '@/components/aboutRudy'
 
 export default {
   data(){
@@ -74,7 +80,8 @@ export default {
     }
   },
   components:{
-    News
+    News,
+    AboutRudy
     
   },
 }
@@ -119,11 +126,15 @@ export default {
 }
 .News-container{
   margin:4%;
+  
 }
 .NewsTitleText{
   font-size: 2em;
   margin-left:5px;
   font-style: normal;
+  
 }
-
+.titleNews-container{
+  margin-bottom: 4%;
+}
 </style>
