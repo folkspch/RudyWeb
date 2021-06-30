@@ -19,7 +19,6 @@
                 <div>
                     <v-row>
                         <v-icon
-                        x-large
                         color="green darken-2"
                         class="icon"
                         >
@@ -36,7 +35,6 @@
                  <div>
                     <v-row>
                         <v-icon
-                        x-large
                         color="blue darken-2"
                         class="icon"
                         >
@@ -53,7 +51,6 @@
                  <div>
                     <v-row>
                         <v-icon
-                        x-large
                         color="yellow darken-2"
                         class="icon"
                         >
@@ -70,7 +67,6 @@
                 <div>
                     <v-row>
                         <v-icon
-                        x-large
                         color="orange darken-2"
                         class="icon"
                         >
@@ -88,6 +84,60 @@
         <div>
             <img  class="img-prod" src="../assets/rudy_prod.png">
         </div>
+    <div class="Advertise2">
+        <h1>เราสามารถช่วยอะไรคุณได้บ้าง</h1>
+        <div class="icon-container">     
+            <v-row justify="space-around">
+                <div>
+                    <v-row>
+                        <v-icon
+                        color="green darken-2"
+                        class="icon"
+                        >
+                        mdi-chart-line
+                        </v-icon>
+                        <div class="AdText">
+                        <h3> เพิ่มประสิทธิภาพการขายที่ไซต์งาน </h3>
+                        <span>ประเมินโอกาสขายในแต่ละเฟสงานก่อสร้าง</span><br/>
+                        <span>เตือนติดตามการขายให้ครบทั้งหลัง</span>
+                        </div>
+                    </v-row>
+                </div>
+
+                 <div>
+                    <v-row>
+                        <v-icon
+                        color="blue darken-2"
+                        class="icon"
+                        >
+                        mdi-apple-icloud
+                        </v-icon>
+                        <div class="AdText">
+                        <h3>เข้าถึงข้อมูลได้ทุกที่ ทุกเวลา</h3>
+                        <span>รายงาน สรุป วิเคราะห์ข้อมูลเชิงลึก</span><br/>
+                        <span>เชื่อมต่อกับระบบฐานข้อมูลร้านค้า</span>
+                        </div>
+                    </v-row>
+                </div>
+
+                 <div>
+                    <v-row>
+                        <v-icon
+                        color="yellow darken-2"
+                        class="icon"
+                        >
+                        mdi-account-multiple
+                        </v-icon>
+                        <div class="AdText">
+                        <h3>บริหารทีมขายอย่างมืออาชีพ</h3>
+                        <span>ระบบบริหารจัดการทีมขาย</span><br/>
+                        <span>สรุปผลการดำเนินงานตามช่วงเวลา</span>
+                        </div>
+                    </v-row>
+                </div>
+            </v-row>
+        </div>
+    </div>
     </div>
 </div>
 </template>
@@ -112,7 +162,7 @@ export default {
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 2em;
+    margin-top: 5%;
 }
 .icon{
     margin-top: 4%;
@@ -134,6 +184,7 @@ export default {
 }
 .img-prod{
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
+
 </style>

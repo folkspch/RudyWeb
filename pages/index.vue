@@ -14,7 +14,7 @@
       </v-carousel>
     </div>
     <div>
-      <AboutRudy/>
+      <AboutRudy class="AboutRudy"/>
     </div>
     <!-- <v-responsive>
      <v-card light>
@@ -106,13 +106,15 @@ export default {
   padding: 0em;
   width:100%;
 }
+.AboutRudy{
+  margin-bottom:15% ;
+}
 .rdy_image{
   width: 100%;
   
 }
 #text{
   color: black;
-  
 }
 .AboutRudy-text{
   text-align: center;
@@ -126,7 +128,6 @@ export default {
 }
 .News-container{
   margin:4%;
-  
 }
 .NewsTitleText{
   font-size: 2em;
@@ -137,4 +138,5 @@ export default {
 .titleNews-container{
   margin-bottom: 4%;
 }
+
 </style>
