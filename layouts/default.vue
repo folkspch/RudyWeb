@@ -14,6 +14,22 @@
     >
       
       <NuxtLink to="/"><img class="rudy_logo" src="../assets/rudy_logo.png"/></NuxtLink>
+  <div class="nav-btn">
+    <v-row
+      
+      no-gutters
+    >
+        <v-btn
+          v-for="(link, text) in links" :key="text"
+          text
+          rounded
+          class="my-2"
+        >
+          <NuxtLink :to="link" class="footer-btn"> {{ text }}</NuxtLink>
+
+        </v-btn>
+      </v-row>
+  </div>
       
     </v-app-bar>
   
@@ -33,7 +49,11 @@ import Footer from '@/components/Footer'
 export default {
   data () {
     return {
-      
+      links: {
+        'About Us': '/About',
+        'Services': '/Service',
+        'Contact Us': '/Contact',
+      },
     }
   },
   components:{
@@ -59,6 +79,13 @@ export default {
   width: 4.5em;
   margin-top: 0.3em;
 }
-
+.footer-btn {
+  color: white;
+  text-decoration: none;
+  
+}
+.nav-btn{
+  float:right;
+}
   
 </style>

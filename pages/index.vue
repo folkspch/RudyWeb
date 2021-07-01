@@ -107,7 +107,7 @@ export default {
   width:100%;
 }
 .AboutRudy{
-  margin-bottom:15% ;
+  margin-bottom:10% ;
 }
 .rdy_image{
   width: 100%;
@@ -136,7 +136,7 @@ export default {
   
 }
 .titleNews-container{
-  margin-bottom: 4%;
+  margin-bottom: 3%;
 }
 
 </style>
