@@ -8,7 +8,7 @@
         <v-divider></v-divider>
         <img class="NewsImg" src="../assets/pic.jpg"/>    
         <h3>ใจความสำคัญ</h3>
-        <p>เนื่อหาทั้งหมดของข่าว................</p>
+        {{this.content[1].description}}
     </v-sheet>  
   </div>
       
@@ -16,8 +16,29 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      content:{}
+    }
+  },
+  methods:{
+    API(){
+      const options = {
+                url: `http://www.server-rudydev.com/admin-project/api/news`,
+                method: 'GET',
+            }
+            this.$axios(options).then(res => {
+               this.content=res.data
+              console.log(this.content)
+            })
+    }
+  },
+  mounted(){
+    this.API()
+  }
+  
 }
+
 </script>
 
 <style scoped>

@@ -91,7 +91,6 @@ export default {
 }
 .row.no-gutters{
   justify-content: flex-end;
-  margin-top: 10px;
 }
   
 </style>
