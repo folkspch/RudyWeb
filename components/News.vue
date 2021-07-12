@@ -8,21 +8,20 @@
     color="#efefef">
         <img
         height="200"
-        width="200"
-        src="../assets/rudyPic/rdylogo_w.jpg"
+        width="300"
+        :src="image"
         />
-        <v-card-title>ตัวอย่างข่าว</v-card-title>
+        <v-card-title class="headertxt">{{newsHeader}}</v-card-title>
         <v-card-text> 
             <v-row
                 align="center"
                 class="mx-0">
-                <div class="news-content">เนื้อหาของข่าว</div>
+                <div class="news-content">{{title}}</div>
             </v-row>
         </v-card-text>
+        <v-divider/>
         <v-card-text>
-            <Nuxt-link to="/shownews">
-                อ่านเพิ่มเติม..
-            </Nuxt-link>    
+            <a @click="gotoNews(id)">อ่านเพิ่มเตืม...</a> 
         </v-card-text>    
     </v-card>
     </div>
@@ -31,12 +30,33 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            
+        }
+    },
+    methods:{
+        gotoNews(id){
+            console.log(id)
+            // this.$router.push(`shownews/${id}`)
+            this.$router.push(`/${id}`)
+        }
+    },
+    props:{
+        newsHeader: String,
+        title: String,
+        image: String,
+        id:Number
+    }
+    
 }
 </script>
 
 <style scoped>
 .Ex-news{
     margin: 0.7em;
+}
+.headertxt{
+    font-size: 100%;
 }
 </style>

@@ -56,10 +56,10 @@
       show-arrows
     >
       <v-slide-item
-        v-for="n in 10"
+        v-for="n in this.newsAPI.length"
         :key="n"
       >
-      <News class="Ex-news"/>
+      <News class="Ex-news" :newsHeader="newsAPI[n-1].title" :image="newsAPI[n-1].image" :id="n" />
       
       </v-slide-item>
     </v-slide-group>
@@ -77,7 +77,14 @@ export default {
   data(){
     return{
     model:null,
-    picAPI:{}
+    picAPI:{},
+    newsAPI:[
+      {
+        image:"",
+        title:""
+      }
+    ]
+    
   }
 },
   components:{
@@ -93,12 +100,24 @@ export default {
             }
             this.$axios(options).then(res => {
                this.picAPI=res.data
+              //  console.log(this.picAPI)
             })
-        }
+        },
+    APInews(){
+      const options = {
+                url: `http://www.server-rudydev.com/admin-project/api/news`,
+                method: 'GET',
+            }
+            this.$axios(options).then(res => {
+               this.newsAPI=res.data
+               console.log(this.newsAPI)
+            })
+    }
   },
 
   mounted(){
     this.APIbanner()
+    this.APInews()
   }
   
 }

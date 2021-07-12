@@ -8,7 +8,9 @@
         <v-divider></v-divider>
         <img class="NewsImg" src="../assets/pic.jpg"/>    
         <h3>ใจความสำคัญ</h3>
-        {{this.content[1].description}}
+
+        <div v-html="this.content[0].description"></div>
+        <!-- {{this.content[1].description}} -->
     </v-sheet>  
   </div>
       
@@ -18,7 +20,19 @@
 export default {
   data(){
     return{
-      content:{}
+      content:[
+        {
+          created_at:"",
+          description:"",
+          image:""
+        }
+      ]
+      ,
+
+      // mydata:{
+      //   title:[],
+      //   description:[]
+      // }
     }
   },
   methods:{
@@ -28,8 +42,24 @@ export default {
                 method: 'GET',
             }
             this.$axios(options).then(res => {
-               this.content=res.data
+              
+            //store all data
+              this.content=res.data
               console.log(this.content)
+
+
+
+            //select custom data
+              for(var i=0;i<res.data.length;i++){
+                this.mydata.title[i]=res.data[i].title
+                this.mydata.description[i]=res.data[i].description
+              }
+
+              console.log("API connected")
+              // console.log(this.mydata.description[2])
+              //  this.content=res.data
+              // console.log(this.content)
+              // console.log("connected API")
             })
     }
   },
