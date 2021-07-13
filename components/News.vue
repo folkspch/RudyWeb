@@ -11,17 +11,10 @@
         width="300"
         :src="image"
         />
-        <v-card-title class="headertxt">{{newsHeader}}</v-card-title>
-        <v-card-text> 
-            <v-row
-                align="center"
-                class="mx-0">
-                <div class="news-content">{{title}}</div>
-            </v-row>
-        </v-card-text>
+        <p class="headertxt">{{newsHeader}}</p>
         <v-divider/>
         <v-card-text>
-            <a @click="gotoNews(id)">อ่านเพิ่มเตืม...</a> 
+            <a @click="gotoNews(id)">อ่านเพิ่มเตืม</a> 
         </v-card-text>    
     </v-card>
     </div>
@@ -38,7 +31,6 @@ export default {
     methods:{
         gotoNews(id){
             console.log(id)
-            // this.$router.push(`shownews/${id}`)
             this.$router.push(`/${id}`)
         }
     },
@@ -58,5 +50,16 @@ export default {
 }
 .headertxt{
     font-size: 100%;
+    margin-left: 0.8em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 250px; */
 }
+
 </style>
