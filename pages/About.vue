@@ -16,10 +16,10 @@ export default {
   data(){
     return{
         name:[
-          'A','B','C','D'
+          'Axxxxx','Bxxxxx','Cxxxxx','Dxxxxx'
         ],
         position:[
-          "CEO","Fronend Dev","Backend Dev","Project Manager"
+          "CEO","Frontend Dev","Backend Dev","Project Manager"
         ]
     }
   },
@@ -32,5 +32,5 @@ export default {
 </script>
 
 <style scoped
-  
+
 </style>
