@@ -1,7 +1,8 @@
 <template>
-<div>
+  <div>
     <div class="carousel">
-        <v-carousel class="carousel"
+      <v-carousel
+        class="carousel"
         id="slider"
         cycle
         height="500"
@@ -9,170 +10,138 @@
         show-arrows-on-hover
       >
         <v-carousel-item v-for="item in picAPI" :key="item.image">
-          <v-img class="rdy_image" :src="item.image"/> 
+          <v-img class="rdy_image" :src="item.image" />
         </v-carousel-item>
       </v-carousel>
-      <!-- <ul>  
-        <li v-for="item in picAPI" :key="item.image">
-          {{ item.image }}
-        </li>
-      </ul>   -->
     </div>
     <div>
-      <AboutRudy class="AboutRudy"/>
+      <AboutRudy class="AboutRudy" />
     </div>
-    <!-- <v-responsive>
-     <v-card light>
-        <v-card-title >
-            <div id="AboutRudy-title"> About RUDY</div>
-        </v-card-title>
-        <v-card-text id="AboutRudy-text">    
-            
-                Rudy แอพพลิเคชั่นบริหารการขายผ่านระบบคลาวด์ เพื่อเพิ่มประสิทธิภาพการขายที่ไซต์งาน
-                ประเมินโอกาสขายในแต่ละเฟสงานก่อสร้าง เตือนการติดตามการขายให้ครบทั้งหลัง
-                เข้าถึงข้อมูลได้ทุกที่ทุกเวลา ช่วยงานบริหารทีมขายอย่างมืออาชีพ
-            
-        </v-card-text>
-    </v-card>
-    </v-responsive> -->
-    
-
-  <div class="News-container">
-    <div class="titleNews-container">
-      <v-row>
-        
-        <img src="../assets/rudyPic/rdylogo.png" height="70em" width="140em" />
-        <div class="NewsTitleText">NEWS</div>
-        
-      </v-row>
-    </div>  
-  <v-sheet
-    class="mx-auto"
-    max-width="60%"
-    light
-  >
-    <v-slide-group
-      
-      show-arrows
-    >
-      <v-slide-item
-        v-for="n in this.newsAPI.length"
-        :key="n"
-      >
-      <News class="Ex-news" :newsHeader="newsAPI[n-1].title" :image="newsAPI[n-1].image" :id="n" />
-      
-      </v-slide-item>
-    </v-slide-group>
-  </v-sheet>
+    <div class="News-container">
+      <div class="titleNews-container">
+        <v-row>
+          <img
+            src="../assets/rudyPic/rdylogo.png"
+            height="70em"
+            width="140em"
+          />
+          <div class="NewsTitleText">NEWS</div>
+        </v-row>
+      </div>
+      <v-sheet class="mx-auto" max-width="60%" light>
+        <v-slide-group show-arrows>
+          <v-slide-item v-for="n in this.newsAPI.length" :key="n">
+            <News
+              class="Ex-news"
+              :newsHeader="newsAPI[n - 1].title"
+              :image="newsAPI[n - 1].image"
+              :id="n"
+            />
+          </v-slide-item>
+        </v-slide-group>
+      </v-sheet>
+    </div>
   </div>
-</div>
-  
 </template>
 
 <script>
-import News from '@/components/News'
-import AboutRudy from '@/components/aboutRudy'
+import News from "@/components/News";
+import AboutRudy from "@/components/aboutRudy";
 
 export default {
-  data(){
-    return{
-    model:null,
-    picAPI:{},
-    newsAPI:[
-      {
-        image:"",
-        title:""
-      }
-    ]
-    
-  }
-},
-  components:{
-    News,
-    AboutRudy
-    
-  },
-  methods:{
-    APIbanner() {
-            const options = {
-                url: `http://www.server-rudydev.com/admin-project/api/banner`,
-                method: 'GET',
-            }
-            this.$axios(options).then(res => {
-               this.picAPI=res.data
-              //  console.log(this.picAPI)
-            })
+  data() {
+    return {
+      model: null,
+      picAPI: {},
+      newsAPI: [
+        {
+          image: "",
+          title: "",
         },
-    APInews(){
+      ],
+    };
+  },
+  components: {
+    News,
+    AboutRudy,
+  },
+  methods: {
+    APIbanner() {
       const options = {
-                url: `http://www.server-rudydev.com/admin-project/api/news`,
-                method: 'GET',
-            }
-            this.$axios(options).then(res => {
-               this.newsAPI=res.data
-               console.log(this.newsAPI)
-            })
-    }
+        url: `http://www.server-rudydev.com/admin-project/api/banner`,
+        method: "GET",
+      };
+      this.$axios(options).then((res) => {
+        this.picAPI = res.data;
+        //  console.log(this.picAPI)
+      });
+    },
+    APInews() {
+      const options = {
+        url: `http://www.server-rudydev.com/admin-project/api/news`,
+        method: "GET",
+      };
+      this.$axios(options).then((res) => {
+        this.newsAPI = res.data;
+        console.log(this.newsAPI);
+      });
+    },
   },
 
-  mounted(){
-    this.APIbanner()
-    this.APInews()
-  }
-  
-}
+  mounted() {
+    this.APIbanner();
+    this.APInews();
+  },
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;500&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;500&display=swap");
+* {
   color: black;
   justify-content: center;
   align-items: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
 }
-.container{
+.container {
   margin-top: 0%;
   padding: 0%;
 }
-#main{
+#main {
   background-color: white;
 }
-.carousel{
+.carousel {
   padding: 0em;
-  width:100%;
-}
-.AboutRudy{
-  margin-bottom:10% ;
-}
-.rdy_image{
   width: 100%;
-  
 }
-#text{
+.AboutRudy {
+  margin-bottom: 10%;
+}
+.rdy_image {
+  width: 100%;
+}
+#text {
   color: black;
 }
-.AboutRudy-text{
+.AboutRudy-text {
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-#rdyImg{
-  width:5em;
-  height:2.5em;
+#rdyImg {
+  width: 5em;
+  height: 2.5em;
   margin-top: 1em;
 }
-.News-container{
-  margin:4%;
+.News-container {
+  margin: 4%;
 }
-.NewsTitleText{
+.NewsTitleText {
   font-size: 2em;
-  margin-left:5px;
+  margin-left: 5px;
   font-style: normal;
-  
 }
-.titleNews-container{
+.titleNews-container {
   margin-bottom: 3%;
 }
-
 </style>
